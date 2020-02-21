@@ -10,18 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
-
     @IBOutlet weak var textField: UITextField!
     @IBOutlet weak var button: UIButton!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var resultLabel: UILabel!
+    @IBOutlet weak var myGradientView: UIView!
     
     var username:String = "amine"
     var password : String = "1"
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
 
     @IBAction func validate(_ sender: Any) {
@@ -34,6 +33,10 @@ class ViewController: UIViewController {
             resultLabel.isHidden = false
         }
     }
+    
+    override var shouldAutorotate: Bool {
+           return false
+       }
 
     
     func checkUser(user: String, pwd:String) -> Bool {
@@ -44,6 +47,8 @@ class ViewController: UIViewController {
         }
         return result
     }
+    
+    
     
 }
 

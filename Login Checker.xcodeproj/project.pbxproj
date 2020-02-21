@@ -16,6 +16,8 @@
 		CE559A0723FD7A7200F56F87 /* Login_CheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE559A0623FD7A7200F56F87 /* Login_CheckerTests.swift */; };
 		CE559A1223FD7A7200F56F87 /* Login_CheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE559A1123FD7A7200F56F87 /* Login_CheckerUITests.swift */; };
 		CEA6A31523FEE196008A9D83 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A31423FEE196008A9D83 /* TableViewController.swift */; };
+		CEC9C4C3240026E900E6D305 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9C4C2240026E900E6D305 /* Constants.swift */; };
+		CEC9C4C624002C7300E6D305 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9C4C524002C7300E6D305 /* Employee.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +53,8 @@
 		CE559A1123FD7A7200F56F87 /* Login_CheckerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login_CheckerUITests.swift; sourceTree = "<group>"; };
 		CE559A1323FD7A7200F56F87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEA6A31423FEE196008A9D83 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		CEC9C4C2240026E900E6D305 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		CEC9C4C524002C7300E6D305 /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +109,8 @@
 				CE5599F123FD7A7100F56F87 /* SceneDelegate.swift */,
 				CE5599F323FD7A7100F56F87 /* ViewController.swift */,
 				CEA6A31423FEE196008A9D83 /* TableViewController.swift */,
+				CEC9C4C524002C7300E6D305 /* Employee.swift */,
+				CEC9C4C2240026E900E6D305 /* Constants.swift */,
 				CE5599F523FD7A7100F56F87 /* Main.storyboard */,
 				CE5599F823FD7A7200F56F87 /* Assets.xcassets */,
 				CE5599FA23FD7A7200F56F87 /* LaunchScreen.storyboard */,
@@ -262,6 +268,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC9C4C3240026E900E6D305 /* Constants.swift in Sources */,
+				CEC9C4C624002C7300E6D305 /* Employee.swift in Sources */,
 				CE5599F423FD7A7100F56F87 /* ViewController.swift in Sources */,
 				CE5599F023FD7A7100F56F87 /* AppDelegate.swift in Sources */,
 				CE5599F223FD7A7100F56F87 /* SceneDelegate.swift in Sources */,
