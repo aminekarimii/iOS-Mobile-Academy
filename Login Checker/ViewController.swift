@@ -16,7 +16,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     @IBOutlet weak var myGradientView: UIView!
     
-    var username:String = "amine"
+    var username:String = "1"
     var password : String = "1"
 
     override func viewDidLoad() {

@@ -8,11 +8,16 @@
 
 import Foundation
 import UIKit
+import SwiftyJSON
+import Alamofire
+import AlamofireImage
+
 
 class CustCell: UITableViewCell {
     
     @IBOutlet weak var label2: UILabel!
     @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var imageview: UIImageView!
 }
 
 struct Person {
@@ -25,52 +30,16 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
     
     var employees : [employee] = []
     
+    let url = URL(string: BASE_URL)!
+    
     @IBOutlet weak var table: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let session = URLSession.shared
-        let url = URL(string: BASE_URL)!
-        
-        let task = session.dataTask(with: url) { data, response, error in
-
-            if error != nil || data == nil {
-                print("Client error!")
-                return
-            }
-
-            guard let response = response as? HTTPURLResponse, (200...299).contains(response.statusCode) else {
-                print("Server error!")
-                return
-            }
-
-            guard let mime = response.mimeType, mime == "application/json" else {
-                print("Wrong MIME type!")
-                return
-            }
-
-            do {
-                if let data = data,
-                    let json = try? JSONSerialization.jsonObject(with: data, options: []) as? [String: Any]{
-                    for case let result in (json["data"] as? [[String: String]])! {
-                        if let emp = employee(json: result) {
-                            self.employees.append(emp)
-                        }
-                    }
-                    DispatchQueue.main.async {
-                        self.table.reloadData()
-                    }
-                    print(self.employees)
-                }
-            } catch {
-                print("JSON error: \(error.localizedDescription)")
-            }
-        }
-        
-    
-        task.resume()
-        
+        // Call api from AF lib
+        getDataFromApi()
+         
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -81,7 +50,30 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! CustCell
         cell.label.text = employees[indexPath.row].employee_name
         cell.label2.text = employees[indexPath.row].employee_salary
-    
+        
+        AF.request(employees[indexPath.row].profile_image).responseImage{ response in
+            if case .success(let image) = response.result {
+                cell.imageview.image = image
+            }
+        }
         return cell
+    }
+    
+    func getDataFromApi(){
+        AF.request(url, method: .get)
+        .validate()
+        .responseJSON { response in
+            switch response.result {
+                case .success(let value):
+                    let jsonresult = JSON(value)["data"].arrayValue
+                    self.employees = jsonresult.map{e in employee(json: e) }
+                    DispatchQueue.main.async(execute: { () -> Void in
+                        self.table.reloadData()
+                    })
+                //print(self.employees)
+                case .failure(let error):
+                    print(error)
+                }
+        }
     }
 }

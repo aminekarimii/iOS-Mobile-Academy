@@ -7,6 +7,7 @@
 
 
 import Foundation
+import SwiftyJSON
 
 struct employee {
     var id:String
@@ -18,20 +19,11 @@ struct employee {
 
 
 extension employee {
-    init?(json: [String: String]) {
-        guard let id = json["id"],
-            let employee_name = json["employee_name"],
-            let employee_salary = json["employee_salary"],
-            let employee_age = json["employee_age"],
-            let profile_image = json["profile_image"]
-        else {
-            return nil
-        }
-
-        self.id = id
-        self.employee_name = employee_name
-        self.employee_salary = employee_salary
-        self.employee_age = employee_age
-        self.profile_image = profile_image
+    init(json: JSON) {
+        self.id = json["id"].stringValue
+        self.employee_name = json["employee_name"].stringValue
+        self.employee_salary = json["employee_salary"].stringValue
+        self.employee_age = json["employee_age"].stringValue
+        self.profile_image = "https://picsum.photos/200/200"
     }
 }

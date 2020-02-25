@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		CE559A0723FD7A7200F56F87 /* Login_CheckerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE559A0623FD7A7200F56F87 /* Login_CheckerTests.swift */; };
 		CE559A1223FD7A7200F56F87 /* Login_CheckerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE559A1123FD7A7200F56F87 /* Login_CheckerUITests.swift */; };
 		CEA6A31523FEE196008A9D83 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEA6A31423FEE196008A9D83 /* TableViewController.swift */; };
+		CEC063B024042BDF00F685E4 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = CEC063AF24042BDF00F685E4 /* SwiftyJSON */; };
+		CEC063B324042E4500F685E4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = CEC063B224042E4500F685E4 /* Alamofire */; };
+		CEC7A64D24052F2800506DDE /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = CEC7A64C24052F2800506DDE /* AlamofireImage */; };
 		CEC9C4C3240026E900E6D305 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9C4C2240026E900E6D305 /* Constants.swift */; };
 		CEC9C4C624002C7300E6D305 /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEC9C4C524002C7300E6D305 /* Employee.swift */; };
 /* End PBXBuildFile section */
@@ -62,6 +65,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CEC063B024042BDF00F685E4 /* SwiftyJSON in Frameworks */,
+				CEC063B324042E4500F685E4 /* Alamofire in Frameworks */,
+				CEC7A64D24052F2800506DDE /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +159,11 @@
 			dependencies = (
 			);
 			name = "Login Checker";
+			packageProductDependencies = (
+				CEC063AF24042BDF00F685E4 /* SwiftyJSON */,
+				CEC063B224042E4500F685E4 /* Alamofire */,
+				CEC7A64C24052F2800506DDE /* AlamofireImage */,
+			);
 			productName = "Login Checker";
 			productReference = CE5599EC23FD7A7000F56F87 /* Login Checker.app */;
 			productType = "com.apple.product-type.application";
@@ -225,6 +236,11 @@
 				Base,
 			);
 			mainGroup = CE5599E323FD7A7000F56F87;
+			packageReferences = (
+				CEC063AE24042BDF00F685E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
+				CEC063B124042E4500F685E4 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				CEC7A64B24052F2800506DDE /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+			);
 			productRefGroup = CE5599ED23FD7A7000F56F87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -602,6 +618,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CEC063AE24042BDF00F685E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		CEC063B124042E4500F685E4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+		CEC7A64B24052F2800506DDE /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CEC063AF24042BDF00F685E4 /* SwiftyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC063AE24042BDF00F685E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
+			productName = SwiftyJSON;
+		};
+		CEC063B224042E4500F685E4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC063B124042E4500F685E4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		CEC7A64C24052F2800506DDE /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CEC7A64B24052F2800506DDE /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CE5599E423FD7A7000F56F87 /* Project object */;
 }
