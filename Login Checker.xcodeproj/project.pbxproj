@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		673798CA240578AB00665AD3 /* SDWebImage in Frameworks */ = {isa = PBXBuildFile; productRef = 673798C9240578AB00665AD3 /* SDWebImage */; };
+		677D4C8C24066CA300217C9C /* SwiftKeychainWrapper in Frameworks */ = {isa = PBXBuildFile; productRef = 677D4C8B24066CA300217C9C /* SwiftKeychainWrapper */; };
+		67A4C4AD2406AEBA00E125F0 /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 67A4C4AB2406AEBA00E125F0 /* Model.xcdatamodeld */; };
 		CE5599F023FD7A7100F56F87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5599EF23FD7A7100F56F87 /* AppDelegate.swift */; };
 		CE5599F223FD7A7100F56F87 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5599F123FD7A7100F56F87 /* SceneDelegate.swift */; };
 		CE5599F423FD7A7100F56F87 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE5599F323FD7A7100F56F87 /* ViewController.swift */; };
@@ -41,6 +44,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		67A4C4AC2406AEBA00E125F0 /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		CE5599EC23FD7A7000F56F87 /* Login Checker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Login Checker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE5599EF23FD7A7100F56F87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE5599F123FD7A7100F56F87 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 			files = (
 				CEC063B024042BDF00F685E4 /* SwiftyJSON in Frameworks */,
 				CEC063B324042E4500F685E4 /* Alamofire in Frameworks */,
+				677D4C8C24066CA300217C9C /* SwiftKeychainWrapper in Frameworks */,
+				673798CA240578AB00665AD3 /* SDWebImage in Frameworks */,
 				CEC7A64D24052F2800506DDE /* AlamofireImage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -88,6 +94,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		673798CB24057F6200665AD3 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				CEC9C4C2240026E900E6D305 /* Constants.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
 		CE5599E323FD7A7000F56F87 = {
 			isa = PBXGroup;
 			children = (
@@ -111,13 +125,14 @@
 		CE5599EE23FD7A7100F56F87 /* Login Checker */ = {
 			isa = PBXGroup;
 			children = (
+				673798CB24057F6200665AD3 /* utils */,
 				CE5599EF23FD7A7100F56F87 /* AppDelegate.swift */,
 				CE5599F123FD7A7100F56F87 /* SceneDelegate.swift */,
 				CE5599F323FD7A7100F56F87 /* ViewController.swift */,
 				CEA6A31423FEE196008A9D83 /* TableViewController.swift */,
 				CEC9C4C524002C7300E6D305 /* Employee.swift */,
-				CEC9C4C2240026E900E6D305 /* Constants.swift */,
 				CE5599F523FD7A7100F56F87 /* Main.storyboard */,
+				67A4C4AB2406AEBA00E125F0 /* Model.xcdatamodeld */,
 				CE5599F823FD7A7200F56F87 /* Assets.xcassets */,
 				CE5599FA23FD7A7200F56F87 /* LaunchScreen.storyboard */,
 				CE5599FD23FD7A7200F56F87 /* Info.plist */,
@@ -163,6 +178,8 @@
 				CEC063AF24042BDF00F685E4 /* SwiftyJSON */,
 				CEC063B224042E4500F685E4 /* Alamofire */,
 				CEC7A64C24052F2800506DDE /* AlamofireImage */,
+				673798C9240578AB00665AD3 /* SDWebImage */,
+				677D4C8B24066CA300217C9C /* SwiftKeychainWrapper */,
 			);
 			productName = "Login Checker";
 			productReference = CE5599EC23FD7A7000F56F87 /* Login Checker.app */;
@@ -240,6 +257,8 @@
 				CEC063AE24042BDF00F685E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				CEC063B124042E4500F685E4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				CEC7A64B24052F2800506DDE /* XCRemoteSwiftPackageReference "AlamofireImage" */,
+				673798C8240578AB00665AD3 /* XCRemoteSwiftPackageReference "SDWebImage" */,
+				677D4C8A24066CA300217C9C /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */,
 			);
 			productRefGroup = CE5599ED23FD7A7000F56F87 /* Products */;
 			projectDirPath = "";
@@ -287,6 +306,7 @@
 				CEC9C4C3240026E900E6D305 /* Constants.swift in Sources */,
 				CEC9C4C624002C7300E6D305 /* Employee.swift in Sources */,
 				CE5599F423FD7A7100F56F87 /* ViewController.swift in Sources */,
+				67A4C4AD2406AEBA00E125F0 /* Model.xcdatamodeld in Sources */,
 				CE5599F023FD7A7100F56F87 /* AppDelegate.swift in Sources */,
 				CE5599F223FD7A7100F56F87 /* SceneDelegate.swift in Sources */,
 				CEA6A31523FEE196008A9D83 /* TableViewController.swift in Sources */,
@@ -620,6 +640,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		673798C8240578AB00665AD3 /* XCRemoteSwiftPackageReference "SDWebImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImage.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.5.2;
+			};
+		};
+		677D4C8A24066CA300217C9C /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ralcr/SwiftKeychainWrapper.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 		CEC063AE24042BDF00F685E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON.git";
@@ -647,6 +683,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		673798C9240578AB00665AD3 /* SDWebImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 673798C8240578AB00665AD3 /* XCRemoteSwiftPackageReference "SDWebImage" */;
+			productName = SDWebImage;
+		};
+		677D4C8B24066CA300217C9C /* SwiftKeychainWrapper */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 677D4C8A24066CA300217C9C /* XCRemoteSwiftPackageReference "SwiftKeychainWrapper" */;
+			productName = SwiftKeychainWrapper;
+		};
 		CEC063AF24042BDF00F685E4 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = CEC063AE24042BDF00F685E4 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;
@@ -663,6 +709,19 @@
 			productName = AlamofireImage;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		67A4C4AB2406AEBA00E125F0 /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				67A4C4AC2406AEBA00E125F0 /* Model.xcdatamodel */,
+			);
+			currentVersion = 67A4C4AC2406AEBA00E125F0 /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = CE5599E423FD7A7000F56F87 /* Project object */;
 }

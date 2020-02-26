@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import SwiftyJSON
 import Alamofire
-import AlamofireImage
+import SDWebImage
 
 
 class CustCell: UITableViewCell {
@@ -50,12 +50,8 @@ class TableViewController: UIViewController, UITableViewDataSource, UITableViewD
         let cell = tableView.dequeueReusableCell(withIdentifier: "MyCell") as! CustCell
         cell.label.text = employees[indexPath.row].employee_name
         cell.label2.text = employees[indexPath.row].employee_salary
+        cell.imageview.sd_setImage(with: URL(string: employees[indexPath.row].profile_image))
         
-        AF.request(employees[indexPath.row].profile_image).responseImage{ response in
-            if case .success(let image) = response.result {
-                cell.imageview.image = image
-            }
-        }
         return cell
     }
     

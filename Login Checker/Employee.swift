@@ -24,6 +24,6 @@ extension employee {
         self.employee_name = json["employee_name"].stringValue
         self.employee_salary = json["employee_salary"].stringValue
         self.employee_age = json["employee_age"].stringValue
-        self.profile_image = "https://picsum.photos/200/200"
+        self.profile_image = "https://i.picsum.photos/id/\(Int(json["id"].stringValue)!*11)/200/200.jpg"
     }
 }
