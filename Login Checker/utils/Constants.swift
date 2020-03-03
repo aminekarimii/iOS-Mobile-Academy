@@ -9,3 +9,4 @@
 import Foundation
 
 let BASE_URL = "http://dummy.restapiexample.com/api/v1/employees"
+let MODEL_NAME = "Model"

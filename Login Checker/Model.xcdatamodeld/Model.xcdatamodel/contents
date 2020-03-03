@@ -1,15 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G95" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Client" representedClassName="Client" syncable="YES" codeGenerationType="class">
-        <attribute name="name" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
-        <relationship name="order" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Order" inverseName="client" inverseEntity="Order"/>
-    </entity>
-    <entity name="Order" representedClassName="Order" syncable="YES" codeGenerationType="class">
-        <attribute name="id_client" optional="YES" attributeType="String"/>
-        <relationship name="client" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Client" inverseName="order" inverseEntity="Client"/>
+    <entity name="EmployeeData" representedClassName="EmployeeData" syncable="YES">
+        <attribute name="employee_age" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="employee_name" optional="YES" attributeType="String"/>
+        <attribute name="employee_salary" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="id" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="profile_image" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Client" positionX="557.78515625" positionY="1396.48046875" width="105.6875" height="73"/>
-        <element name="Order" positionX="769.5" positionY="1349.22265625" width="128" height="73"/>
+        <element name="EmployeeData" positionX="557.78515625" positionY="1396.48046875" width="105.6875" height="118"/>
     </elements>
 </model>
